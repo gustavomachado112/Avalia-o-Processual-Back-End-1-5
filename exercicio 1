@@ -1,0 +1,26 @@
+texto = input("Digite o seu  texto: ")
+palavras = texto.split()
+quantidade = len(palavras)
+
+longa =""
+for palavra in palavras:
+    if len(palavra)> len(longa):
+        longa = palavra
+
+frequencia ={}
+for palavra in palavras:
+    if palavra in frequencia:
+        frequencia[palavra] +=1
+    else:
+        frequencia[palavra] =1
+
+frequente =""
+contagem =0
+for palavra in frequencia:
+    if frequencia[palavra]>contagem:
+        contagem = frequencia[palavra]
+        frequente = palavra
+        
+print("Quantidade de palavras que teve:", quantidade)
+print("Palavra mais longa que apareceu no texto:", longa)
+print("Palavra que mais aparece constantemente no seu texto:", frequente)
