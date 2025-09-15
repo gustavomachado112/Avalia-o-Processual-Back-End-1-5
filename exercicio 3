@@ -1,0 +1,25 @@
+import random
+nome = "gustavo"
+tamanho_geral =20
+if len(nome) > tamanho_geral:
+    print("O nome é muito longo para a senha.")
+else:
+    antes = (tamanho_geral - len(nome)) /2 
+    depois = tamanho_geral - len(nome) - antes
+    letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    numeros = "0123456789"
+    simbolos = "!@#$%&*?"
+    caracteres_no_geral = letras+numeros+simbolos
+
+    senha = ""
+    i =0
+    while i < antes:
+        senha += random.choice(caracteres_no_geral)
+        i +=1
+        
+    senha+=nome
+    i =0
+    while i < depois:
+        senha += random.choice(caracteres_no_geral)
+        i +=1
+    print("Senha gerada com sucesso amigo:", senha) 
