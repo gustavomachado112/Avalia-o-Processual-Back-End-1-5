@@ -1,0 +1,19 @@
+numeros_da_jequeti =[]
+print("Digite seus 10 numeros ,um deve ser o numero da chamada da escola:")
+for i in range(10):
+    numero = int(input(f"Número {i + 1}: "))
+    numeros_da_jequeti.append(numero)
+print("\nLista original:")
+print(numeros_da_jequeti)
+
+numeros_ordenados = list(numeros_da_jequeti)
+numeros_ordenados.sort()
+print("\nLista ordenada crescente:")
+print(numeros_ordenados)
+
+sem_repeticao =[]
+for num in numeros_da_jequeti:
+    if num not in sem_repeticao:
+        sem_repeticao.append(num)
+print("\nLista sem números repetidos:")
+print(sem_repeticao)
